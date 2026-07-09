@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .fruits-container li {
+            color: tomato;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,17 +25,49 @@
             <li>DOM baba</li>
             <li>DOM baba</li>
         </ul>
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li class="fruits">Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="visit-title">Places I like to visit</h1>
+            <ul>
+                <li class="imp-places">Sondarban</li>
+                <li class="imp-places">CoxBazar</li>
+                <li class="imp-places">Kuyakata</li>
+            </ul>
+        </section>
     </main>
+
+
     <script src="./js/dom.js"></script>
     <script>
-        const h1Tag = document.getElementsByTagName('h1')
-        for (const h1 of h1Tag) {
-            console.log(h1.innerText)
+        // const h1Tag = document.getElementsByTagName('h1')
+        // for (const h1 of h1Tag) {
+        //     console.log(h1.innerText)
+        // }
+        // const liTag = document.getElementsByTagName('li')
+        // for (const li of liTag) {
+        //     console.log(li.innerText)
+        // }
+        const fruitsTitle = document.getElementById('fruits-title')
+        fruitsTitle.innerText = 'fruits changed By JS'
+        const places = document.getElementsByClassName('imp-places');
+        for (const pls of places) {
+            console.log(pls.innerText)
         }
-        const liTag = document.getElementsByTagName('li')
-        for (const li of liTag) {
+        const someLi = document.querySelectorAll('.fruits-container li')
+        for (const li of someLi) {
             console.log(li.innerText)
         }
+        const fruits = document.querySelector('.fruits')
+        console.log(fruits.innerText)
+
+
     </script>
 </body>
 
