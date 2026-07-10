@@ -13,11 +13,12 @@
 
         .yellow-bg {
             background-color: yellowgreen !important;
-            
+
         }
-        .fontSize{
-          font-size: 40px;
-          text-align: center;
+
+        .fontSize {
+            font-size: 40px;
+            text-align: center;
         }
     </style>
 </head>
@@ -34,12 +35,13 @@
             <li>DOM baba</li>
             <li>DOM baba</li>
         </ul>
-        <section class="fruits-container">
+        <section id="fruits-container">
             <h1 id="fruits-title">Fruits I like</h1>
-            <ul>
+            <ul class="fruits-list">
                 <li class="fruits">Apple</li>
                 <li>Banana</li>
-                <li>Carrot</li>
+                <li id="fruits-list">Carrot</li>
+
             </ul>
         </section>
         <section id="places-container" class="yellow-bg fontSize">
@@ -49,6 +51,10 @@
                 <li class="imp-places">CoxBazar</li>
                 <li class="imp-places">Kuyakata</li>
             </ul>
+        </section>
+
+        <section id="servis-container">
+
         </section>
     </main>
 
@@ -64,6 +70,14 @@
         // for (const li of liTag) {
         //     console.log(li.innerText)
         // }
+
+        const li = document.createElement("li");
+        li.innerText = "Orange";
+
+        const fruitsList = document.getElementById("fruits-list");
+
+        fruitsList.appendChild(li);
+
         const fruitsTitle = document.getElementById('fruits-title')
         fruitsTitle.innerText = 'fruits changed By JS'
         const places = document.getElementsByClassName('imp-places');
@@ -78,6 +92,11 @@
         // console.log(fruits.innerText)
         const fruitsContainer = document.getElementsByClassName('fruits-container')[0].innerHTML = '<h2> ABC wow DOM is Js</h2>'
         // console.log(fruitsContainer)
+
+        const servisContainer = document.createElement('h1')
+        servisContainer.innerText = 'Bus Servis Dhaka to Coxbazar'
+        const servisContainer2 = document.getElementById('servis-container')
+        servisContainer2.appendChild(servisContainer)
     </script>
 </body>
 
