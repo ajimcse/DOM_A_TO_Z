@@ -10,6 +10,15 @@
         .fruits-container li {
             color: tomato;
         }
+
+        .yellow-bg {
+            background-color: yellowgreen !important;
+            
+        }
+        .fontSize{
+          font-size: 40px;
+          text-align: center;
+        }
     </style>
 </head>
 
@@ -33,7 +42,7 @@
                 <li>Carrot</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container" class="yellow-bg fontSize">
             <h1 id="visit-title">Places I like to visit</h1>
             <ul>
                 <li class="imp-places">Sondarban</li>
@@ -45,6 +54,7 @@
 
 
     <script src="./js/dom.js"></script>
+    <script src="./js/styleInJs.js"></script>
     <script>
         // const h1Tag = document.getElementsByTagName('h1')
         // for (const h1 of h1Tag) {
@@ -58,16 +68,16 @@
         fruitsTitle.innerText = 'fruits changed By JS'
         const places = document.getElementsByClassName('imp-places');
         for (const pls of places) {
-            console.log(pls.innerText)
+            // console.log(pls.innerText)
         }
         const someLi = document.querySelectorAll('.fruits-container li')
         for (const li of someLi) {
-            console.log(li.innerText)
+            // console.log(li.innerText)
         }
         const fruits = document.querySelector('.fruits')
-        console.log(fruits.innerText)
-
-
+        // console.log(fruits.innerText)
+        const fruitsContainer = document.getElementsByClassName('fruits-container')[0].innerHTML = '<h2> ABC wow DOM is Js</h2>'
+        // console.log(fruitsContainer)
     </script>
 </body>
 
