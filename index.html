@@ -27,7 +27,7 @@
     <header>
         <h1>WelCome To My DOM</h1>
     </header>
-    <main>
+    <main id="main-container">
         <h1>My Awsome DOM </h1>
         <ul>
             <li>DOM baba</li>
@@ -47,13 +47,13 @@
         <section id="places-container" class="yellow-bg fontSize">
             <h1 id="visit-title">Places I like to visit</h1>
             <ul>
-                <li class="imp-places">Sondarban</li>
                 <li class="imp-places">CoxBazar</li>
+                <li class="imp-places">Sondarban</li>
                 <li class="imp-places">Kuyakata</li>
             </ul>
         </section>
 
-        <section id="servis-container">
+        <section id="skill-container">
 
         </section>
     </main>
@@ -93,10 +93,7 @@
         const fruitsContainer = document.getElementsByClassName('fruits-container')[0].innerHTML = '<h2> ABC wow DOM is Js</h2>'
         // console.log(fruitsContainer)
 
-        const servisContainer = document.createElement('h1')
-        servisContainer.innerText = 'Bus Servis Dhaka to Coxbazar'
-        const servisContainer2 = document.getElementById('servis-container')
-        servisContainer2.appendChild(servisContainer)
+
     </script>
 </body>
 
