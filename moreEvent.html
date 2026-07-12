@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events </title>
+</head>
+
+<body>
+    <h1>Explore More Events</h1>
+    <button id="btn-more">Event</button>
+    <input id="itext-field" type="text">
+
+    <script>
+        //    document.getElementById('btn-more').addEventListener('click', function(){
+        //     console.log('add event')
+        //     })
+        document.getElementById('itext-field').addEventListener('focus', function () {
+            // console.log('add focus')
+        })
+        document.getElementById('itext-field').addEventListener('blur', function () {
+            // console.log('add blur')
+        })
+        document.getElementById('itext-field').addEventListener('keyup', function () {
+            console.log('add keyup')
+        })
+        
+    </script>
+</body>
+
+</html>
